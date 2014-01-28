@@ -3,18 +3,17 @@
 # Source lib to get the function get_tmux_pwd
 source "${TMUX_POWERLINE_DIR_LIB}/tmux_adapter.sh"
 
-#branch_symbol="⭠"
-#git_colour="5"
-#svn_colour="220"
-#hg_colour="45"
 if [ "${TMUX_POWERLINE_PATCHED_FONT_IN_USE}" = "true" ]; then
 	branch_symbol="⭠"
+	git_colour="5"
+	svn_colour="220"
+	hg_colour="45"
 else
 	branch_symbol="*"
+	git_colour="255"
+	svn_colour="255"
+	hg_colour="255"
 fi
-git_colour="255"
-svn_colour="255"
-hg_colour="255"
 
 
 run_segment() {
