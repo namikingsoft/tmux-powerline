@@ -7,7 +7,11 @@ source "${TMUX_POWERLINE_DIR_LIB}/tmux_adapter.sh"
 #git_colour="5"
 #svn_colour="220"
 #hg_colour="45"
-branch_symbol="*"
+if [ "${TMUX_POWERLINE_PATCHED_FONT_IN_USE}" = "true" ]; then
+	branch_symbol="⭠"
+else
+	branch_symbol="*"
+fi
 git_colour="255"
 svn_colour="255"
 hg_colour="255"
